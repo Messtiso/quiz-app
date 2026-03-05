@@ -36,6 +36,6 @@ After completing the tutorial version, the next step is to improve and expand th
 - Adding new features
 - Enhancing the quiz logic
 
-## Screenshots
+## Screenshot (v1.0)
 
-Screenshots of the application will be added as the project evolves.
+![Quiz App Screenshot](images/v1.png)
