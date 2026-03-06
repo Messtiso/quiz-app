@@ -44,13 +44,13 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz(){
+const startQuiz = () => {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
-function showQuestion(){
+const showQuestion = () => {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
@@ -71,14 +71,14 @@ function showQuestion(){
 }
 
 
-function resetState(){
+const resetState = () => {
     nextButton.style.display = "none";
     while(answerButtons.firstChild){
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-function selectAnswer(e){
+const selectAnswer = (e) => {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect){
@@ -97,14 +97,14 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
-function showScore(){
+const showScore = () => {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
 
-function handleNextButton(){
+const handleNextButton = () => {
     currentQuestionIndex++;
     if(currentQuestionIndex < questions.length){
         showQuestion();
@@ -115,7 +115,7 @@ function handleNextButton(){
 
 
 
-nextButton.addEventListener("click", ()=>{
+nextButton.addEventListener("click", ()=> {
     if(currentQuestionIndex < questions.length){
         handleNextButton();
     }else{
