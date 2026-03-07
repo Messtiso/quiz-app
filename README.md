@@ -39,3 +39,25 @@ After completing the tutorial version, the next step is to improve and expand th
 ## Screenshot (v1.0)
 
 ![Quiz App Screenshot](images/v1.png)
+
+## Version 2.0 – Improvements (In Progress)
+
+This version focuses on improving code quality, readability, and expanding the functionality of the quiz application beyond the original tutorial implementation.
+
+### Planned Improvements
+
+**Code Quality**
+- Refactor traditional function declarations to modern ES6 arrow functions for improved consistency and readability.
+- Add descriptive comments to explain important sections of the code.
+
+**User Experience**
+- Add a progress indicator showing the current question number (e.g. Question 3 / 10).
+- Implement a final score screen at the end of the quiz.
+- Add a restart button to allow users to retake the quiz.
+
+**Quiz Logic Enhancements**
+- Randomise question order each time the quiz starts.
+- Randomise answer order to prevent memorisation patterns.
+
+**Future Feature**
+- Load quiz questions from an external file instead of hardcoding them in the JavaScript code. This would allow users to easily generate quizzes on different topics by editing the question file.
