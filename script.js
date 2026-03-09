@@ -1,3 +1,7 @@
+// -------------------------
+// Quiz Data
+// -------------------------
+
 const questions = [
     {
         question: "Which is the largest animal in the world?",
@@ -37,12 +41,24 @@ const questions = [
     }
 ];
 
+// -------------------------
+// DOM Elements
+// -------------------------
+
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
 
+// -------------------------
+// Quiz State
+// -------------------------
+
 let currentQuestionIndex = 0;
 let score = 0;
+
+// -------------------------
+// Quiz Flow
+// -------------------------
 
 const startQuiz = () => {
     currentQuestionIndex = 0;
@@ -54,8 +70,7 @@ const showQuestion = () => {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.
-    question;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -70,6 +85,9 @@ const showQuestion = () => {
     })
 }
 
+// -------------------------
+// Helper Functions
+// -------------------------
 
 const resetState = () => {
     nextButton.style.display = "none";
@@ -113,7 +131,9 @@ const handleNextButton = () => {
     }
 }
 
-
+// -------------------------
+// Event Listeners
+// -------------------------
 
 nextButton.addEventListener("click", ()=> {
     if(currentQuestionIndex < questions.length){
@@ -123,5 +143,8 @@ nextButton.addEventListener("click", ()=> {
     }
 })
 
+// -------------------------
+// App Start
+// -------------------------
 
 startQuiz();
