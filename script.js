@@ -117,7 +117,22 @@ const selectAnswer = (e) => {
 
 const showScore = () => {
     resetState();
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+
+    const percentage = (score/questions.length) * 100;
+
+    let message = "";
+
+    if(percentage <= 25) {
+        message = "Keep practising!";
+    } else if(percentage <= 50) {
+        message = "Not bad, but you can do better.";
+    } else if(percentage <= 75) {
+        message = " Good job!";
+    } else {
+        message = "Excellent work!";
+    }
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}! <br> ${message}`;
+    
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
