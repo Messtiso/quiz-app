@@ -70,7 +70,7 @@ const showQuestion = () => {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+    questionElement.innerHTML = `Question ${questionNo} / ${questions.length}<br>${currentQuestion.question}`;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -132,7 +132,7 @@ const showScore = () => {
         message = "Excellent work!";
     }
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}! <br> ${message}`;
-    
+
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
