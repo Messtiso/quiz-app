@@ -55,6 +55,7 @@ const nextButton = document.getElementById("next-btn");
 
 let currentQuestionIndex = 0;
 let score = 0;
+let shuffledQuestions = [];
 
 // -------------------------
 // Quiz Flow
@@ -63,14 +64,15 @@ let score = 0;
 const startQuiz = () => {
     currentQuestionIndex = 0;
     score = 0;
+    shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
     nextButton.innerHTML = "Next";
     showQuestion();
 }
 const showQuestion = () => {
     resetState();
-    let currentQuestion = questions[currentQuestionIndex];
+    let currentQuestion = shuffledQuestions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
-    questionElement.innerHTML = `Question ${questionNo} / ${questions.length}<br>${currentQuestion.question}`;
+    questionElement.innerHTML = `Question ${questionNo} / ${shuffledQuestions.length}<br>${currentQuestion.question}`;
 
     currentQuestion.answers.forEach(answer => {
         const button = document.createElement("button");
@@ -118,7 +120,7 @@ const selectAnswer = (e) => {
 const showScore = () => {
     resetState();
 
-    const percentage = (score/questions.length) * 100;
+    const percentage = (score/shuffledQuestions.length) * 100;
 
     let message = "";
 
@@ -131,7 +133,7 @@ const showScore = () => {
     } else {
         message = "Excellent work!";
     }
-    questionElement.innerHTML = `You scored ${score} out of ${questions.length}! <br> ${message}`;
+    questionElement.innerHTML = `You scored ${score} out of ${shuffledQuestions.length}! <br> ${message}`;
 
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
@@ -139,7 +141,7 @@ const showScore = () => {
 
 const handleNextButton = () => {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length){
+    if(currentQuestionIndex < shuffledQuestions.length){
         showQuestion();
     }else{
         showScore();
@@ -151,7 +153,7 @@ const handleNextButton = () => {
 // -------------------------
 
 nextButton.addEventListener("click", ()=> {
-    if(currentQuestionIndex < questions.length){
+    if(currentQuestionIndex < shuffledQuestions.length){
         handleNextButton();
     }else{
         startQuiz();
