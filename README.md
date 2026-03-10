@@ -44,19 +44,23 @@ After completing the tutorial version, the next step is to improve and expand th
 
 This version focuses on improving code quality, readability, and expanding the functionality of the quiz application beyond the original tutorial implementation.
 
-### Planned Improvements
+### Completed Improvements
 
 **Code Quality**
-- Refactor traditional function declarations to modern ES6 arrow functions for improved consistency and readability.
-- Add descriptive comments to explain important sections of the code.
+- Refactored functions to modern ES6 arrow function syntax for improved consistency.
+- Organised the JavaScript file into clear section blocks to improve readability.
 
 **User Experience**
-- Add a progress indicator showing the current question number (e.g. Question 3 / 10).
-- Implement a final score screen at the end of the quiz.
-- Add a restart button to allow users to retake the quiz.
+- Added a progress indicator showing the current question number (e.g. Question 2 / 4).
+- Added performance feedback after the quiz based on the final score.
+- Implemented a restart button allowing users to play the quiz again.
 
 **Quiz Logic Enhancements**
-- Randomise question order each time the quiz starts.
+- Randomised question order each time the quiz starts to make the experience less predictable.
+
+### Planned Improvements
+
+**Quiz Logic Enhancements**
 - Randomise answer order to prevent memorisation patterns.
 
 **Future Feature**
