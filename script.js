@@ -73,8 +73,9 @@ const showQuestion = () => {
     let currentQuestion = shuffledQuestions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = `Question ${questionNo} / ${shuffledQuestions.length}<br>${currentQuestion.question}`;
+    const shuffledAnswers = [...currentQuestion.answers].sort(() => Math.random() - 0.5);
 
-    currentQuestion.answers.forEach(answer => {
+    shuffledAnswers.forEach(answer => {
         const button = document.createElement("button");
         button.innerHTML = answer.text;
         button.classList.add("btn");
