@@ -53,6 +53,7 @@ This version focuses on improving code quality, readability, and expanding the f
 **User Experience**
 - Added a progress indicator showing the current question number (e.g. Question 2 / 4).
 - Added performance feedback after the quiz based on the final score.
+- Added answer randomisations answer to prevent memorisation patterns.
 - Implemented a restart button allowing users to play the quiz again.
 
 **Quiz Logic Enhancements**
@@ -63,5 +64,6 @@ This version focuses on improving code quality, readability, and expanding the f
 **Quiz Logic Enhancements**
 - Randomise answer order to prevent memorisation patterns.
 
-**Future Feature**
-- Load quiz questions from an external file instead of hardcoding them in the JavaScript code. This would allow users to easily generate quizzes on different topics by editing the question file.
+### Upcoming Improvements
+- Load quiz questions from a JSON file
+- Add category selection
