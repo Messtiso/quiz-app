@@ -4,14 +4,14 @@ A simple quiz application built with HTML, CSS, and JavaScript.
 
 ## Version 1.0 – Tutorial Implementation
 
-This project was created by following a YouTube tutorial in order to practice core JavaScript concepts such as:
+This project was created by following a YouTube tutorial in order to practise core JavaScript concepts such as:
 
 - DOM manipulation
-- event handling
-- dynamic UI updates
-- basic application state (score, current question)
+- Event handling
+- Dynamic UI updates
+- Basic application state (score, current question)
 
-Tutorial followed:
+Tutorial followed:  
 https://www.youtube.com/watch?v=PBcqGxrr9g8
 
 The goal of this version was to understand how a quiz application works and how JavaScript interacts with the DOM.
@@ -27,43 +27,47 @@ The goal of this version was to understand how a quiz application works and how 
 1. Download or clone the repository
 2. Open `index.html` in your browser
 
-## Future Improvements (Version 2.0)
-
-After completing the tutorial version, the next step is to improve and expand the project by:
-
-- Refactoring the code structure
-- Improving the user interface
-- Adding new features
-- Enhancing the quiz logic
-
 ## Screenshot (v1.0)
 
 ![Quiz App Screenshot](images/v1.png)
 
-## Version 2.0 – Improvements (In Progress)
+---
 
-This version focuses on improving code quality, readability, and expanding the functionality of the quiz application beyond the original tutorial implementation.
+# Version 2.0 – Improvements
 
-### Completed Improvements
+Version 2 expands the original tutorial project by improving the code structure, user experience, and quiz logic.
 
-**Code Quality**
+## Completed Improvements
+
+### Code Quality
 - Refactored functions to modern ES6 arrow function syntax for improved consistency.
-- Organised the JavaScript file into clear section blocks to improve readability.
+- Organised the JavaScript file into clear section blocks for better readability.
+- Added comments to explain important parts of the quiz logic.
 
-**User Experience**
-- Added a progress indicator showing the current question number (e.g. Question 2 / 4).
-- Added performance feedback after the quiz based on the final score.
-- Added answer randomisations answer to prevent memorisation patterns.
-- Implemented a restart button allowing users to play the quiz again.
+### User Experience
+- Added a progress indicator showing the current question number (e.g. **Question 2 / 4**).
+- Added performance feedback based on the final score.
+- Implemented a restart button allowing users to replay the quiz.
 
-**Quiz Logic Enhancements**
-- Randomised question order each time the quiz starts to make the experience less predictable.
+### Quiz Logic Enhancements
+- Randomised **question order** each time the quiz starts.
+- Randomised **answer order** to prevent memorisation patterns.
 
-### Planned Improvements
+---
 
-**Quiz Logic Enhancements**
-- Randomise answer order to prevent memorisation patterns.
+## Planned Improvements
 
-### Upcoming Improvements
-- Load quiz questions from a JSON file
-- Add category selection
+### Quiz Logic Enhancements
+- Load quiz questions from a JSON file instead of hardcoding them.
+
+### Upcoming Features
+- Add quiz categories
+- Allow users to generate quizzes on different topics
+
+---
+
+## Project Goals
+
+This project is part of my learning journey in JavaScript and web development.  
+The goal is to progressively improve the application beyond the original tutorial by refactoring the code and adding new features.
+
